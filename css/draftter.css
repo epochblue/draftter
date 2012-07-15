@@ -1,0 +1,106 @@
+/**
+ * draftter.css
+ * @author Bill Israel <bill.israel@gmail.com>
+ */
+
+/*--[ 0. Tags ]-----*/
+html { font-size: 100.01%; }
+body {
+    background: #f6f6f6;
+    color: #333; 
+    font: normal 1em/1.5 Helvetica, Arial, sans-serif;
+}
+
+h1 {
+    font-family: 'Architects Daughter', Helvetica, sans-serif;
+    color: #36c;
+    font-size: 2em;
+}
+
+a {
+    text-decoration: none;
+}
+
+textarea {
+    padding: 5px 10px;
+    width: 340px;
+    border-color: #999;
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+        -ie-border-radius: 5px;
+         -o-border-radius: 5px;
+            border-radius: 5px;
+}
+
+
+/*--[ 1. Basic Layout ]-----*/
+.container {
+    margin: 0 auto;
+    width: 360px; 
+}
+
+.draft {
+    margin: 1.5em 0;
+}
+
+.tweet-buttons {
+    text-align: right;
+}
+
+.global-buttons {
+    margin: 3em 0;
+    text-align: center;
+}
+
+footer {
+    color: #999;
+    font-size: 0.75em;
+    line-height: 2;
+    margin: 3em 0;
+    text-align: center;
+}
+
+
+/*--[ 2. Buttons ]-----*/
+.button {
+    background-color: #ccc;
+    border: 1px solid #999;
+    display: inline-block;
+    margin-left: 10px;
+    padding: 0 1em;
+    -webkit-border-radius: 5px;
+       -moz-border-radius: 5px;
+        -ie-border-radius: 5px;
+         -o-border-radius: 5px;
+            border-radius: 5px;
+}
+
+.tweet {
+    background-color: #5bb75b;
+    border-color: #387038;
+    color: #fff;
+}
+
+.delete-draft {
+    font-size: 0.8em;
+    color: #c00;
+}
+
+.add-draft {
+    background-color: #0074cc;
+    border-color: #003580;
+    color: #fff;
+}
+
+.save-drafts {
+    background-color: #faa732;
+    border-color: #ad6704;
+    color: #fff;
+}
+
+.disabled {
+    background-color: #aaa;
+    border-color: #666;
+    color: #fff;
+}
+

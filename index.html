@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>draftter | simple twitter drafts</title>
+
+    <link href='http://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/draftter.css">
+
+    <!--TODO: favicon, apple touch icon -->
+    <script type="text/template" id="draft-template">
+        <div class="draft">
+            <textarea class="draft-text" rows="8" cols="50">{{ tweet }}</textarea>
+            <div class="tweet-buttons">
+                <a href="#" class="delete-draft">Delete</a>
+                <a href="http://twitter.com/intent/tweet" class="button tweet">Tweet</a>
+            </div>
+        </div>
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>draftter</h1>
+
+        <section class="drafts"></section>
+
+        <div class="global-buttons">
+            <a href="#" class="button add-draft">Add Draft</a>
+            <a href="#" class="button save-drafts">Save Drafts</a>
+        </div>
+
+        <footer>
+            <p>a time waster by <a href="http://billisrael.info/">Bill Israel</a> | &copy; 2012</p> 
+        </footer>
+    </div>
+
+    <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="js/mustache-0.5.1-dev.js"></script>
+    <script type="text/javascript" src="js/draftter.js"></script>
+</body>
+</html>
+
