@@ -1,5 +1,6 @@
 /**
  * draftter.js
+ *
  * @author Bill Israel <bill.israel@gmail.com>
  */
 $(function() {
@@ -36,9 +37,9 @@ $(function() {
             text = encodeURIComponent($target.parent().prev('textarea').val()),
             url = $target.attr('href') + '?text=' + text;
 
-        if (window.open) {
+        if (typeof window.open !== 'undefined') {
             if(!window.open(url, '', 'width=500,height=500')) {
-                window.loation = url;
+                window.location = url;
             }
         }
     });
@@ -61,7 +62,7 @@ $(function() {
                 tweets.push($(elm).val()); 
             });
 
-            if (window.localStorage) {
+            if (typeof window.localStorage !== 'undefined') {
                 localStorage.setItem('tweets', JSON.stringify(tweets));
                 $save.addClass('disabled');
                 dirty = false;
