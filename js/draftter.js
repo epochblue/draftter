@@ -12,8 +12,7 @@ $(function() {
     // Click handler for adding a draft
     $('.add-draft').on('click', null, function(e) {
         e.preventDefault();
-        var html = Mustache.to_html($tmpl, { tweet: '' });
-        $drafts.prepend(html); 
+        $drafts.prepend($tmpl.replace('{{ tweet }}', ''));
     });
 
     // Delegate handler for deleting a draft
@@ -72,12 +71,12 @@ $(function() {
 
 
     // When the page loads, try to get draft tweets out of local storage
-    if (window.localStorage) {
+    if (typeof window.localStorage !== 'undefined') {
         var tweets = JSON.parse(localStorage.getItem('tweets'));
 
         if (tweets) {
             for (var i = tweets.length; i--; ) {
-                var html = Mustache.to_html($tmpl, { tweet: tweets[i] });
+                var html = $tmpl.replace('{{ tweet }}', tweets[i]);
                 $drafts.prepend(html);
             }
         }
